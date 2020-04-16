@@ -1,0 +1,28 @@
+<ng-container *ngIf="comentss">
+    <div class="container-fluid"> 
+        <table class="table table-bordered">
+            <thead class="thead-dark" style="text-align:center;">
+              <tr><th class="rc">Comentarios</th></tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let comentss of comentss">
+                  <td>
+                    <table class="table">
+                        <tr>
+                            <td class="table-secondary">Nombre:{{comentss.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Comentario: {{comentss.body}}</td>
+                        </tr>  
+                    </table>
+                  </td>
+              </tr>
+              <tr>
+                <td style="text-align:center;">
+                  <button (click)="sendDate('fecha')" type="button" class="btn btn-primary">Emitir</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</ng-container>

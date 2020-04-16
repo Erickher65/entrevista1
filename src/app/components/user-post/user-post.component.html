@@ -1,0 +1,15 @@
+<ng-container *ngIf="posts">
+    <div class="container-fluid">
+        <div class="right">
+            <h1>
+                {{fechap}}
+            </h1>
+        </div>
+        <div *ngFor="let post of posts">
+            <h1 class="display-4">Detail Post {{post.id}}</h1>
+            <h1>{{post.title}}</h1>
+            <h1>{{post.body}}</h1>
+        </div>
+    </div>
+</ng-container>
+<app-comments [post]="idp" (sd)="mostrarfecha($event)"></app-comments>
